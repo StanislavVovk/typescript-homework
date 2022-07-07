@@ -1,11 +1,14 @@
 interface IFilm {
-    results:[
-        id: number,
-        title: string,
-        overview: string,
-        poster_path: string,
-        release_date: string
-    ]
+    id: string,
+    title: string,
+    overview: string,
+    poster_path: string,
+    backdrop_path: string,
+    release_date: string
 }
 
-export default IFilm
+interface IPostResponse {
+    [key: string]: any
+}
+
+export {IFilm, IPostResponse}
