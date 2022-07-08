@@ -8,6 +8,6 @@ const {POPULAR} = API_PATH as IAPI_PATH
 export async function startup(): Promise<void> {
     clear_posts()
     clear_random_post()
-    await get_response(POPULAR);
     await get_random_movie(POPULAR)
+    await get_response(POPULAR);
 }

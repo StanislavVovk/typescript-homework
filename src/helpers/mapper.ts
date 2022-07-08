@@ -1,6 +1,6 @@
 import {IFilm, IPostResponse} from "./post_interface/post";
 
-export function mapper(posts: IPostResponse): IFilm {
+export function mapper(posts: IPostResponse | any): IFilm {
     return posts.map(({id, overview, poster_path, backdrop_path, release_date, title}: IFilm) => ({
         id,
         title,

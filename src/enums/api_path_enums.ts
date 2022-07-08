@@ -11,7 +11,7 @@ const API_PATH: IAPI_PATH = {
     POPULAR: 'popular',
     RATED: 'top_rated',
     UPCOMING: 'upcoming',
-    DETAILS: 'get-movie-details'
+    DETAILS: ""
 }
 
 export {API_PATH, IAPI_PATH};

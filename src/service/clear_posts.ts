@@ -1,4 +1,5 @@
 // todo try to unify this
+
 function clear_posts(): void {
     const posts: NodeList = document.querySelectorAll(".col-lg-3, col-md-4, col-12 p-2");
     posts.forEach((post: Node | HTMLDivElement) => {
@@ -15,4 +16,12 @@ function clear_random_post(): void {
     }
 }
 
-export {clear_posts, clear_random_post}
+function atribute_remover(buttons:any){
+    buttons.forEach(
+        (button: HTMLInputElement) => {
+            button.removeAttribute("checked")
+        }
+    )
+}
+
+export {clear_posts, clear_random_post, atribute_remover}

@@ -1,5 +1,6 @@
 import {API_URL, API_KEY, MOVIE_DOMAIN} from "../enums/env_enum";
 
+
 class Request {
     public API_URL: string;
     private readonly _API_KEY: string;
@@ -27,6 +28,9 @@ class Request {
     }
 
     async create_request<T>(): Promise<T> {
+        if (!this.target) {
+            return this.http(`${this.API_URL + this._subdomain + this.query}?api_key=${this._API_KEY}&language=en-US&page=${this.page}`)
+        }
         if (this.query) {
             return this.http(`${this.API_URL + this.target + this._subdomain}?api_key=${this._API_KEY}&language=en-US&query=${this.query}&page=${this.page}`)
         }
